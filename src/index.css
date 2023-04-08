@@ -2,14 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@layer base {
+  :root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+
+    /* Colors (HSL) */
+    --black: 223 45% 9%;
+    --white: 240 100% 99%;
+    --blue-dark: 235 46% 20%;
+    --blue-light: 246 77% 62%;
+    --blue-darken: 235 40% 34%;
+    --blue-desaturated: 235 45% 61%;
+    --blue-pale: 236 100% 87%;
+    --cards-orange: 15 100% 69%;
+    --cards-blue: 195 74% 62%;
+    --cards-pink: 348 100% 68%;
+    --cards-green: 145 57% 55%;
+    --cards-violet: 263 62% 51%;
+    --cards-yellow: 43 84% 65%;
+  }
 }
