@@ -4,6 +4,7 @@ export default {
   theme: {
     extend: {
       fontSize: {
+        "4xl": "2rem",
         "6xl": "3.5rem",
       },
       borderRadius: {
