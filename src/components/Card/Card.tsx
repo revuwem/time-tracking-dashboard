@@ -29,12 +29,10 @@ const Card: React.FC<CardProps> = ({
   return (
     <div>
       {/* FIX: bg color not working if passed throw props */}
-      <div
-        className={`px-4 ${bgColor[color]} rounded flex justify-end translate-y-6`}
-      >
+      <div className={`px-4 ${bgColor[color]} rounded flex justify-end`}>
         <img src={icon} alt="" />
       </div>
-      <section className="relative p-4 md:p-8 bg-blue-dark rounded z-10 hover:bg-blue-darken hover:cursor-pointer">
+      <section className="relative p-4 md:p-7 -mt-7 bg-blue-dark rounded z-10 hover:bg-blue-darken hover:cursor-pointer">
         <div className="flex justify-between mb-6">
           <h3 className="font-medium text-lg text-white">{title}</h3>
           <Dropdown>
