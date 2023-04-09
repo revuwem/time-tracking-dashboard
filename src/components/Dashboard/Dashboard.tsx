@@ -4,7 +4,7 @@ type DashboardProps = {};
 
 const Dashboard: React.FC<DashboardProps> = ({}) => {
   return (
-    <div>
+    <>
       <Card
         title="Work"
         icon="images/icon-work.svg"
@@ -29,7 +29,7 @@ const Dashboard: React.FC<DashboardProps> = ({}) => {
         currentTime={4}
         previousTime={6}
       />
-    </div>
+    </>
   );
 };
 
