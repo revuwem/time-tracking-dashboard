@@ -1,3 +1,5 @@
+import Dropdown from "../Dropdown";
+
 type CardProps = {
   title: string;
   icon: string;
@@ -35,8 +37,23 @@ const Card: React.FC<CardProps> = ({
       <section className="relative p-4 md:p-8 bg-blue-dark rounded z-10 hover:bg-blue-darken hover:cursor-pointer">
         <div className="flex justify-between mb-6">
           <h3 className="font-medium text-lg text-white">{title}</h3>
-          {/* TODO: replace with Dropdown */}
-          <span className="text-white">...</span>
+          <Dropdown>
+            <Dropdown.Item>
+              <button onClick={() => console.log("reset current")}>
+                Reset current
+              </button>
+            </Dropdown.Item>
+            <Dropdown.Item>
+              <button onClick={() => console.log("reset previous")}>
+                Reset previous
+              </button>
+            </Dropdown.Item>
+            <Dropdown.Item>
+              <button onClick={() => console.log("reset all")}>
+                Reset all
+              </button>
+            </Dropdown.Item>
+          </Dropdown>
         </div>
         <div className="flex md:flex-col justify-between gap-1.5">
           <p className="font-light text-4xl md:text-6xl text-white">
