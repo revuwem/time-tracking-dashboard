@@ -53,7 +53,7 @@ const Card: React.FC<CardProps> = ({
             </Dropdown.Item>
           </Dropdown>
         </div>
-        <div className="flex md:flex-col justify-between gap-1.5">
+        <div className="flex md:flex-col items-center md:items-start justify-between gap-1.5">
           <p className="font-light text-4xl md:text-6xl text-white">
             {currentTime}hrs
           </p>
