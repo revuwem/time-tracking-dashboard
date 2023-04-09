@@ -1,5 +1,15 @@
+import Dashboard from "./components/Dashboard";
+import Profile from "./components/Profile";
+import TimeSelector from "./components/TimeSelector";
+
 function App() {
-  return <div>App</div>;
+  return (
+    <main>
+      <Profile />
+      <TimeSelector />
+      <Dashboard />
+    </main>
+  );
 }
 
 export default App;
