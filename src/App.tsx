@@ -5,7 +5,7 @@ import TimeSelector from "./components/TimeSelector";
 function App() {
   return (
     <main>
-      <Profile />
+      <Profile name="Jeremy Dawson" photo="images/image-jeremy.png" />
       <TimeSelector />
       <Dashboard />
     </main>
