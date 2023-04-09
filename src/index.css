@@ -31,4 +31,8 @@
     --cards-violet: 263deg 62% 51%;
     --cards-yellow: 43deg 84% 65%;
   }
+
+  body {
+    min-height: 100vh;
+  }
 }
