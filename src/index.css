@@ -17,18 +17,18 @@
     -webkit-text-size-adjust: 100%;
 
     /* Colors (HSL) */
-    --black: 223 45% 9%;
-    --white: 240 100% 99%;
-    --blue-dark: 235 46% 20%;
-    --blue-light: 246 77% 62%;
-    --blue-darken: 235 40% 34%;
-    --blue-desaturated: 235 45% 61%;
-    --blue-pale: 236 100% 87%;
-    --cards-orange: 15 100% 69%;
-    --cards-blue: 195 74% 62%;
-    --cards-pink: 348 100% 68%;
-    --cards-green: 145 57% 55%;
-    --cards-violet: 263 62% 51%;
-    --cards-yellow: 43 84% 65%;
+    --black: 223deg 45% 9%;
+    --white: 240deg 100% 99%;
+    --blue-dark: 235deg 46% 20%;
+    --blue-light: 246deg 77% 62%;
+    --blue-darken: 235deg 40% 34%;
+    --blue-desaturated: 235deg 45% 61%;
+    --blue-pale: 236deg 100% 87%;
+    --cards-orange: 15deg 100% 69%;
+    --cards-blue: 195deg 74% 62%;
+    --cards-pink: 348deg 100% 68%;
+    --cards-green: 145deg 57% 55%;
+    --cards-violet: 263deg 62% 51%;
+    --cards-yellow: 43deg 84% 65%;
   }
 }
