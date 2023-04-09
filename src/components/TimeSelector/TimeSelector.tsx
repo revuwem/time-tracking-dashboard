@@ -1,4 +1,4 @@
-import TimeSelectorItem from "../TimeSelectorItem.tsx";
+import TimeSelectorItem from "../TimeSelectorItem";
 
 type TimeSelectorProps = {};
 
