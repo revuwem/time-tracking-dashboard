@@ -1,6 +1,7 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import { getTimeTrackingData } from "../../api";
 import { Loading } from "../../types/AppState";
+import { TimePeriod } from "../../types/TimeTracking";
 
 export const fetchTimeTrackingData = createAsyncThunk(
   "timeTracking/fetchData",
@@ -12,18 +13,24 @@ export const fetchTimeTrackingData = createAsyncThunk(
 
 type TimeTrackingState = {
   data: [];
+  period: TimePeriod;
   loading: Loading;
 };
 
 const initialState = {
   data: [],
+  period: "daily",
   loading: "idle",
 } as TimeTrackingState;
 
 const timeTrackingSlice = createSlice({
   name: "timeTracking",
   initialState,
-  reducers: {},
+  reducers: {
+    setPeriod: (state, action: PayloadAction<TimePeriod>) => {
+      state.period = action.payload;
+    }
+  },
   extraReducers: (builder) => {
     builder.addCase(fetchTimeTrackingData.pending, (state, action) => {
       state.loading = "pending";
@@ -36,6 +43,6 @@ const timeTrackingSlice = createSlice({
   },
 });
 
-export const {} = timeTrackingSlice.actions;
+export const {setPeriod} = timeTrackingSlice.actions;
 
 export default timeTrackingSlice.reducer;
