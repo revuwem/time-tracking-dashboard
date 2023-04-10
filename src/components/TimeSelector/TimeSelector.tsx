@@ -32,7 +32,7 @@ const TimeSelector: React.FC<TimeSelectorProps> = ({}) => {
     <nav className="p-8 pt-12 bg-blue-dark rounded">
       <ul className="flex justify-center md:flex-col gap-5">
         {Object.keys(timeOptions).map((option) => (
-          <TimeSelectorItem active={period === option}>
+          <TimeSelectorItem key={option} active={period === option}>
             <button onClick={(e) => onChangePeriod(option as TimePeriod)}>
               {timeOptions[option as TimePeriod].name}
             </button>

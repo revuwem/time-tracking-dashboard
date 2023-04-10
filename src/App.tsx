@@ -39,7 +39,7 @@ function App() {
             </div>
           </div>
           {data.map((item) => (
-            <Card data={item} />
+            <Card key={item.title} data={item} />
           ))}
         </div>
       )}
