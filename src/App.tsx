@@ -17,10 +17,6 @@ function App() {
     (state) => state.timeTracking.data
   );
 
-  const period = useSelector<RootState, TimePeriod>(
-    (state) => state.timeTracking.period
-  );
-
   const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
@@ -43,7 +39,7 @@ function App() {
             </div>
           </div>
           {data.map((item) => (
-            <Card data={item} period={period} />
+            <Card data={item} />
           ))}
         </div>
       )}

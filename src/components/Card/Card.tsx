@@ -1,13 +1,10 @@
-import {
-  TimeCardColor,
-  TimePeriod,
-  TimeTracking,
-} from "../../types/TimeTracking";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../store";
+import { TimePeriod, TimeTracking } from "../../types/TimeTracking";
 import Dropdown from "../Dropdown";
 
 type CardProps = {
   data: TimeTracking;
-  period: TimePeriod;
 };
 
 const bgColor = {
@@ -19,7 +16,11 @@ const bgColor = {
   yellow: "bg-cards-yellow",
 };
 
-const Card: React.FC<CardProps> = ({ data, period }) => {
+const Card: React.FC<CardProps> = ({ data }) => {
+  const period = useSelector<RootState, TimePeriod>(
+    (state) => state.timeTracking.period
+  );
+
   return (
     <div>
       <div
