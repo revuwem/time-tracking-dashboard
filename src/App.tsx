@@ -7,7 +7,7 @@ import TimeSelector from "./components/TimeSelector";
 import { AppDispatch, RootState } from "./store";
 import { fetchTimeTrackingData } from "./store/slice/timeTracking";
 import { Loading } from "./types/AppState";
-import { TimeTracking } from "./types/TimeTracking";
+import { TimePeriod, TimeTracking } from "./types/TimeTracking";
 
 function App() {
   const loading: Loading = useSelector<RootState>(
@@ -15,6 +15,10 @@ function App() {
   );
   const data = useSelector<RootState, TimeTracking[]>(
     (state) => state.timeTracking.data
+  );
+
+  const period = useSelector<RootState, TimePeriod>(
+    (state) => state.timeTracking.period
   );
 
   const dispatch = useDispatch<AppDispatch>();
@@ -39,7 +43,7 @@ function App() {
             </div>
           </div>
           {data.map((item) => (
-            <Card data={item} period="daily" />
+            <Card data={item} period={period} />
           ))}
         </div>
       )}
