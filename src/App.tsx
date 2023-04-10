@@ -1,13 +1,12 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Card from "./components/Card";
-import Dashboard from "./components/Dashboard";
-import Profile from "./components/Profile";
-import TimeSelector from "./components/TimeSelector";
 import { AppDispatch, RootState } from "./store";
 import { fetchTimeTrackingData } from "./store/slice/timeTracking";
+import { TimeTracking } from "./types/TimeTracking";
 import { Loading } from "./types/AppState";
-import { TimePeriod, TimeTracking } from "./types/TimeTracking";
+import Profile from "./components/Profile";
+import TimeSelector from "./components/TimeSelector";
+import Card from "./components/Card";
 
 function App() {
   const loading: Loading = useSelector<RootState>(
