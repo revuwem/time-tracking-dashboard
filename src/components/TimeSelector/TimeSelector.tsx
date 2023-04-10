@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store";
 import { setPeriod } from "../../store/slice/timeTracking";
 import { TimePeriod } from "../../types/TimeTracking";
-import TimeSelectorItem from "../TimeSelectorItem";
+import Nav from "../Nav";
 
 type TimeSelectorProps = {};
 
@@ -29,17 +29,15 @@ const TimeSelector: React.FC<TimeSelectorProps> = ({}) => {
   const onChangePeriod = (period: TimePeriod) => dispatch(setPeriod(period));
 
   return (
-    <nav className="p-8 pt-12 bg-blue-dark rounded">
-      <ul className="flex justify-center md:flex-col gap-5">
-        {Object.keys(timeOptions).map((option) => (
-          <TimeSelectorItem key={option} active={period === option}>
-            <button onClick={(e) => onChangePeriod(option as TimePeriod)}>
-              {timeOptions[option as TimePeriod].name}
-            </button>
-          </TimeSelectorItem>
-        ))}
-      </ul>
-    </nav>
+    <Nav>
+      {Object.keys(timeOptions).map((option) => (
+        <Nav.Item key={option} active={period === option}>
+          <button onClick={(e) => onChangePeriod(option as TimePeriod)}>
+            {timeOptions[option as TimePeriod].name}
+          </button>
+        </Nav.Item>
+      ))}
+    </Nav>
   );
 };
 
