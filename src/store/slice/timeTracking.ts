@@ -1,7 +1,11 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import { getTimeTrackingData } from "../../api";
 import { Loading } from "../../types/AppState";
-import { TimePeriod } from "../../types/TimeTracking";
+import {
+  TimeTracking,
+  TimePeriod,
+  TimeTrack,
+} from "../../types/TimeTracking";
 
 export const fetchTimeTrackingData = createAsyncThunk(
   "timeTracking/fetchData",
@@ -12,16 +16,16 @@ export const fetchTimeTrackingData = createAsyncThunk(
 );
 
 type TimeTrackingState = {
-  data: [];
+  data: TimeTracking[];
   period: TimePeriod;
   loading: Loading;
 };
 
-const initialState = {
+const initialState: TimeTrackingState = {
   data: [],
   period: "daily",
   loading: "idle",
-} as TimeTrackingState;
+};
 
 const timeTrackingSlice = createSlice({
   name: "timeTracking",
@@ -29,7 +33,31 @@ const timeTrackingSlice = createSlice({
   reducers: {
     setPeriod: (state, action: PayloadAction<TimePeriod>) => {
       state.period = action.payload;
-    }
+    },
+    resetTrack: (
+      state,
+      action: PayloadAction<{
+        timeTrackingTitle: string;
+        timePeriod: TimePeriod;
+        timeTrack: TimeTrack | "all";
+      }>
+    ) => {
+      const { timeTrackingTitle, timePeriod, timeTrack } = action.payload;
+
+      const timeTrackingTypeIdx = state.data.findIndex(
+        (item) => item.title === timeTrackingTitle
+      );
+
+      if (timeTrack === "all") {
+        const timeTracks =
+          state.data[timeTrackingTypeIdx].timeframes[timePeriod];
+        Object.keys(timeTracks).forEach((track) => {
+          timeTracks[track as TimeTrack] = 0;
+        });
+      } else {
+        state.data[timeTrackingTypeIdx].timeframes[timePeriod][timeTrack] = 0;
+      }
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(fetchTimeTrackingData.pending, (state, action) => {
@@ -43,6 +71,6 @@ const timeTrackingSlice = createSlice({
   },
 });
 
-export const {setPeriod} = timeTrackingSlice.actions;
+export const { setPeriod, resetTrack } = timeTrackingSlice.actions;
 
 export default timeTrackingSlice.reducer;
