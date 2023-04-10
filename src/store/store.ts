@@ -1,7 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
+import timeTrackingReducer from "./slice/timeTracking"
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    timeTracking: timeTrackingReducer,
+  }
 });
 
 export type RootState = ReturnType<typeof store.getState>;
