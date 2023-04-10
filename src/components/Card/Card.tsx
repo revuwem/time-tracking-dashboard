@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store";
+import { resetTrack } from "../../store/slice/timeTracking";
 import { TimePeriod, TimeTracking } from "../../types/TimeTracking";
 import Dropdown from "../Dropdown";
 
@@ -17,9 +18,40 @@ const bgColor = {
 };
 
 const Card: React.FC<CardProps> = ({ data }) => {
+  const dispatch = useDispatch();
   const period = useSelector<RootState, TimePeriod>(
     (state) => state.timeTracking.period
   );
+
+  const onResetCurrentTrack = () => {
+    dispatch(
+      resetTrack({
+        timeTrackingTitle: data.title,
+        timePeriod: period,
+        timeTrack: "current",
+      })
+    );
+  };
+
+  const onResetPreviousTrack = () => {
+    dispatch(
+      resetTrack({
+        timeTrackingTitle: data.title,
+        timePeriod: period,
+        timeTrack: "previous",
+      })
+    );
+  };
+
+  const onResetAllTrack = () => {
+    dispatch(
+      resetTrack({
+        timeTrackingTitle: data.title,
+        timePeriod: period,
+        timeTrack: "all",
+      })
+    );
+  };
 
   return (
     <div>
@@ -35,19 +67,17 @@ const Card: React.FC<CardProps> = ({ data }) => {
           <h3 className="font-medium text-lg text-white">{data.title}</h3>
           <Dropdown>
             <Dropdown.Item>
-              <button onClick={() => console.log("reset current")}>
+              <button onClick={() => onResetCurrentTrack()}>
                 Reset current
               </button>
             </Dropdown.Item>
             <Dropdown.Item>
-              <button onClick={() => console.log("reset previous")}>
+              <button onClick={() => onResetPreviousTrack()}>
                 Reset previous
               </button>
             </Dropdown.Item>
             <Dropdown.Item>
-              <button onClick={() => console.log("reset all")}>
-                Reset all
-              </button>
+              <button onClick={() => onResetAllTrack()}>Reset all</button>
             </Dropdown.Item>
           </Dropdown>
         </div>
