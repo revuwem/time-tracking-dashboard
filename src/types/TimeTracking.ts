@@ -1,8 +1,4 @@
-type TimeTrack = {
-  current: number;
-  previous: number;
-};
-
+export type TimeTrack = "current" | "previous";
 export type TimePeriod = "daily" | "weekly" | "monthly";
 export type TimeCardColor =
   | "orange"
@@ -12,9 +8,11 @@ export type TimeCardColor =
   | "violet"
   | "yellow";
 
+export type TimeFrame = { [k in TimeTrack]: number };
+
 export type TimeTracking = {
-  title: "string";
+  title: string;
   icon: string;
   color: TimeCardColor;
-  timeframes: { [k in TimePeriod]: TimeTrack };
+  timeframes: { [k in TimePeriod]: TimeFrame };
 };
