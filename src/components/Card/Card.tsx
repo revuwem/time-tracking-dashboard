@@ -22,9 +22,12 @@ const bgColor = {
 const Card: React.FC<CardProps> = ({ data, period }) => {
   return (
     <div>
-      {/* FIX: bg color not working if passed throw props */}
-      <div className={`px-4 ${bgColor[data.color]} rounded flex justify-end`}>
-        <img src={data.icon} alt="" />
+      <div
+        className={`h-16 md:h-[70px] px-4 rounded flex justify-end overflow-hidden ${
+          bgColor[data.color]
+        }`}
+      >
+        <img src={data.icon} alt="" className="h-full -translate-y-2 " />
       </div>
       <section className="relative p-4 md:p-7 -mt-7 bg-blue-dark rounded z-10 hover:bg-blue-darken hover:cursor-pointer">
         <div className="flex justify-between mb-6">
