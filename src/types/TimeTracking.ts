@@ -3,7 +3,9 @@ type TimeTrack = {
   previous: number;
 };
 
+export type TimePeriod = "daily" | "weekly" | "monthly";
+
 export type TimeTracking = {
   title: "string";
-  timeframes: { daily: TimeTrack; weekly: TimeTrack; monthly: TimeTrack };
+  timeframes: { [k in TimePeriod]: TimeTrack };
 };
