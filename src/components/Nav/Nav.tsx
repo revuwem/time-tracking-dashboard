@@ -5,7 +5,7 @@ type NavComponent = React.FC<NavProps> & {
 
 const Nav: NavComponent = ({ children }) => {
   return (
-    <nav className="p-8 pt-12 bg-blue-dark rounded">
+    <nav className="p-8 pt-12 bg-blue-pale dark:bg-blue-dark rounded">
       <ul className="flex justify-center md:flex-col gap-5">{children}</ul>
     </nav>
   );
@@ -17,8 +17,8 @@ type NavItemComponent = React.FC<NavItemProps> & {};
 const NavItem: NavItemComponent = ({ active = false, children }) => {
   return (
     <li
-      className={`hover:text-white hover:cursor-pointer ${
-        active ? "text-white" : "text-blue-desaturated"
+      className={`hover:text-black dark:hover:text-white hover:cursor-pointer ${
+        active ? "text-black dark:text-white" : "text-blue-desaturated"
       } `}
     >
       {children}
