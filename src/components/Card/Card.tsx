@@ -61,12 +61,12 @@ const Card: React.FC<CardProps> = ({ data, index = 0 }) => {
     );
   };
 
-  const animationDelay = useMemo(() => index * 30, []);
+  const animationDelay = useMemo(() => index * 50, []);
 
   return (
     <div
       style={{
-        animation: `wait ${animationDelay}ms, grow 1s ease-in-out ${animationDelay}ms`,
+        animation: `wait ${animationDelay}ms, grow 0.3s ease-in-out ${animationDelay}ms`,
       }}
     >
       <div
