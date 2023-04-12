@@ -6,6 +6,7 @@ import Dropdown from "../Dropdown";
 
 type CardProps = {
   data: TimeTracking;
+  index?: number;
 };
 
 const bgColor = {
@@ -17,7 +18,7 @@ const bgColor = {
   yellow: "bg-cards-yellow",
 };
 
-const Card: React.FC<CardProps> = ({ data }) => {
+const Card: React.FC<CardProps> = ({ data, index = 0 }) => {
   const dispatch = useDispatch();
   const period = useSelector<RootState, TimePeriod>(
     (state) => state.timeTracking.period
@@ -54,7 +55,13 @@ const Card: React.FC<CardProps> = ({ data }) => {
   };
 
   return (
-    <div>
+    <div
+      style={{
+        animation: `wait ${index * 10}ms, grow 0.5s ease-in-out ${
+          index * 10
+        }ms`,
+      }}
+    >
       <div
         className={`h-16 md:h-[70px] px-4 rounded flex justify-end overflow-hidden ${
           bgColor[data.color]

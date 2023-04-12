@@ -37,8 +37,8 @@ function App() {
               <TimeSelector />
             </div>
           </div>
-          {data.map((item) => (
-            <Card key={item.title} data={item} />
+          {data.map((item, index) => (
+            <Card key={item.title} data={item} index={index} />
           ))}
         </div>
       )}
