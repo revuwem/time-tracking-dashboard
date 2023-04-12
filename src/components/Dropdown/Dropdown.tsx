@@ -16,10 +16,13 @@ const Dropdown: DropdownComponent = ({ children }) => {
 
   return (
     <div className="relative">
-      <button onClick={onDropdownClick} className="p-3">
+      <button
+        onClick={onDropdownClick}
+        className="p-3 text-blue-lighten dark:text-blue-pale"
+      >
         <svg xmlns="http://www.w3.org/2000/svg" width="21" height="5">
           <path
-            fill="#BBC0FF"
+            fill="currentColor"
             fillRule="evenodd"
             d="M2.5 0a2.5 2.5 0 110 5 2.5 2.5 0 010-5zm8 0a2.5 2.5 0 110 5 2.5 2.5 0 010-5zm8 0a2.5 2.5 0 110 5 2.5 2.5 0 010-5z"
           ></path>
