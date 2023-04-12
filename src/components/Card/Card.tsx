@@ -61,7 +61,7 @@ const Card: React.FC<CardProps> = ({ data, index = 0 }) => {
       }}
     >
       <div
-        className={`h-16 md:h-[70px] px-4 rounded flex justify-end overflow-hidden ${
+        className={`h-16 md:h-[70px] px-4 rounded flex justify-end overflow-hidden opacity-70 dark:opacity-100 ${
           bgColor[data.color]
         }`}
       >
