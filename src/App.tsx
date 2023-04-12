@@ -8,6 +8,7 @@ import { Loading } from "./types/AppState";
 import Profile from "./components/Profile";
 import TimeSelector from "./components/TimeSelector";
 import Card from "./components/Card";
+import ThemeSwitch from "./components/ThemeSwitch";
 
 function App() {
   const loading: Loading = useSelector<RootState>(
@@ -27,7 +28,7 @@ function App() {
 
   return (
     <main
-      className={`min-h-screen px-5 py-10 grid place-content-center lg:place-content-stretch lg:place-items-center ${
+      className={`min-h-screen p-5 pb-10 grid place-content-center lg:place-content-stretch lg:place-items-center ${
         isDarkMode ? "dark bg-black" : "bg-gray"
       } `}
     >
@@ -36,23 +37,27 @@ function App() {
           Loading your productivity stats...
         </p>
       )}
-      <nav className="text-black dark:text-white">
-        <button onClick={toggle}>Set Light Mode</button>
-      </nav>
+
       {loading === "succeeded" && (
-        <div className="w-full max-w-[1100px] grid gap-8 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 lg:grid-flow-col items-end lg:items-stretch">
-          <div className="row-span-full flex flex-col">
-            <div className="grow z-10">
-              <Profile name="Jeremy Dawson" photo="images/image-jeremy.png" />
+        <>
+          <nav className="w-full text-black dark:text-white p-2 mb-4 grid justify-items-end">
+            <ThemeSwitch isDark={isDarkMode} toggle={toggle} />
+          </nav>
+
+          <div className="w-full max-w-[1100px] grid gap-8 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 lg:grid-flow-col items-end lg:items-stretch">
+            <div className="row-span-full flex flex-col">
+              <div className="grow z-10">
+                <Profile name="Jeremy Dawson" photo="images/image-jeremy.png" />
+              </div>
+              <div className="-mt-6">
+                <TimeSelector />
+              </div>
             </div>
-            <div className="-mt-6">
-              <TimeSelector />
-            </div>
+            {data.map((item, index) => (
+              <Card key={item.title} data={item} index={index} />
+            ))}
           </div>
-          {data.map((item, index) => (
-            <Card key={item.title} data={item} index={index} />
-          ))}
-        </div>
+        </>
       )}
     </main>
   );
