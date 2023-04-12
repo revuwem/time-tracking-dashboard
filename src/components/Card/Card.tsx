@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store";
 import { resetTrack } from "../../store/slice/timeTracking";
@@ -54,10 +55,12 @@ const Card: React.FC<CardProps> = ({ data, index = 0 }) => {
     );
   };
 
+  const animationDelay = useMemo(() => index * 30, []);
+
   return (
     <div
       style={{
-        animation: `wait ${index * 10}ms, grow 1s ease-in-out ${index * 10}ms`,
+        animation: `wait ${animationDelay}ms, grow 1s ease-in-out ${animationDelay}ms`,
       }}
     >
       <div
