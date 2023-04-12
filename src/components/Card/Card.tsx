@@ -57,9 +57,7 @@ const Card: React.FC<CardProps> = ({ data, index = 0 }) => {
   return (
     <div
       style={{
-        animation: `wait ${index * 10}ms, grow 0.5s ease-in-out ${
-          index * 10
-        }ms`,
+        animation: `wait ${index * 10}ms, grow 1s ease-in-out ${index * 10}ms`,
       }}
     >
       <div
