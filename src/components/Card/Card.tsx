@@ -19,6 +19,12 @@ const bgColor = {
   yellow: "bg-cards-yellow",
 };
 
+const periodsAlias = {
+  daily: "day",
+  weekly: "week",
+  monthly: "month",
+};
+
 const Card: React.FC<CardProps> = ({ data, index = 0 }) => {
   const dispatch = useDispatch();
   const period = useSelector<RootState, TimePeriod>(
@@ -96,7 +102,7 @@ const Card: React.FC<CardProps> = ({ data, index = 0 }) => {
             {data.timeframes[period].current}hrs
           </p>
           <p className="font-light text-capitalize text-base text-blue-lighten dark:text-blue-pale">
-            Last {period} - {data.timeframes[period].previous}hrs
+            Last {periodsAlias[period]} - {data.timeframes[period].previous}hrs
           </p>
         </div>
       </section>
