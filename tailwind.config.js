@@ -17,7 +17,7 @@ export default {
         blue: {
           dark: "hsl(var(--blue-dark) / <alpha-value>)",
           light: "hsl(var(--blue-light) / <alpha-value>)",
-          darken: "hsl(var(--blue-darken) / <alpha-value>)",
+          lighten: "hsl(var(--blue-lighten) / <alpha-value>)",
           desaturated: "hsl(var(--blue-desaturated) / <alpha-value>)",
           pale: "hsl(var(--blue-pale) / <alpha-value>)",
         },
