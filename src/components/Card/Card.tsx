@@ -67,9 +67,11 @@ const Card: React.FC<CardProps> = ({ data, index = 0 }) => {
       >
         <img src={data.icon} alt="" className="h-full -translate-y-2 " />
       </div>
-      <section className="relative p-4 md:p-7 -mt-7 bg-blue-dark rounded z-10 hover:bg-blue-lighten hover:cursor-pointer">
+      <section className="relative p-4 md:p-7 -mt-7 bg-blue-pale dark:bg-blue-dark rounded z-10 hover:bg-blue-darken dark:hover:bg-blue-darken hover:cursor-pointer transition">
         <div className="flex justify-between mb-6">
-          <h3 className="font-medium text-lg text-white">{data.title}</h3>
+          <h3 className="font-medium text-lg text-black dark:text-white">
+            {data.title}
+          </h3>
           <Dropdown>
             <Dropdown.Item>
               <button onClick={() => onResetCurrentTrack()}>
@@ -87,10 +89,10 @@ const Card: React.FC<CardProps> = ({ data, index = 0 }) => {
           </Dropdown>
         </div>
         <div className="flex md:flex-col items-center md:items-start justify-between gap-1.5">
-          <p className="font-light text-4xl md:text-6xl text-white">
+          <p className="font-light text-4xl md:text-6xl text-blue-dark dark:text-white">
             {data.timeframes[period].current}hrs
           </p>
-          <p className="font-light text-capitalize text-base text-blue-pale">
+          <p className="font-light text-capitalize text-base text-blue-lighten dark:text-blue-pale">
             Last {period} - {data.timeframes[period].previous}hrs
           </p>
         </div>
