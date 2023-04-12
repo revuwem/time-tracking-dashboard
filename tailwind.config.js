@@ -14,11 +14,13 @@ export default {
       colors: {
         black: "hsl(var(--black) / <alpha-value>)",
         white: "hsl(var(--white) / <alpha-value>)",
+        gray: "hsl(var(--gray) / <alpha-value>)",
         blue: {
           dark: "hsl(var(--blue-dark) / <alpha-value>)",
           light: "hsl(var(--blue-light) / <alpha-value>)",
           lighten: "hsl(var(--blue-lighten) / <alpha-value>)",
           desaturated: "hsl(var(--blue-desaturated) / <alpha-value>)",
+          darken: "hsl(var(--blue-darken) / <alpha-value>)",
           pale: "hsl(var(--blue-pale) / <alpha-value>)",
         },
         cards: {

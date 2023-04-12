@@ -19,11 +19,15 @@
     /* Colors (HSL) */
     --black: 223deg 45% 9%;
     --white: 240deg 100% 99%;
+    --gray: 236deg 100% 97%;
+
     --blue-dark: 235deg 46% 20%;
     --blue-light: 246deg 77% 62%;
     --blue-lighten: 235deg 40% 34%;
     --blue-desaturated: 235deg 45% 61%;
+    --blue-darken: 236deg, 85%, 80%;
     --blue-pale: 236deg 100% 87%;
+
     --cards-orange: 15deg 100% 69%;
     --cards-blue: 195deg 74% 62%;
     --cards-pink: 348deg 100% 68%;
