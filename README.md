@@ -14,9 +14,6 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -28,85 +25,68 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - Switch between viewing Daily, Weekly, and Monthly stats
 
+Extended requirements:
+
+- User should be able to switch between Dark and Light theme mode
+- UI theme should be initialized based on user's system preferences
+- User should be able to reset current streak on selected period
+- User should be able to reset previous streak on selected period
+- User should be able to reset all streak on selected period
+
 ### Screenshot
 
-![](./screenshot.jpg)
+Dark theme 
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+![Dark theme UI](./screenshot/screenshot-dark.png)
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+Light theme 
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Dark theme UI](./screenshot/screenshot-light.png)
 
 ### Links
 
+- Live Site URL: [https://revuwem.github.io/time-tracking-dashboard/](https://revuwem.github.io/time-tracking-dashboard/)
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- [Vite](https://vitejs.dev/) - build tool
+- [React](https://reactjs.org/) - components
+- [Typescript](https://www.typescriptlang.org/) - types
+- [TailwindCSS](https://tailwindcss.com/) - styles
+- [Redux Toolkit](https://redux-toolkit.js.org/) - state management
+- [usehook-ts](https://usehooks-ts.com/) - hooks
+- Desktop-first workflow
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+What I learned:
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+- how to implement React [dot notation pattern](https://revuwem.github.io/time-tracking-dashboard/) for reusable components 
+- how to use Redux Toolkit to implement state management
+- practice Typescript
+- how to implement dark/light mode switch using React and TailwindCSS
+- how to implement custom animations using TailwindCSS
+- how to implement styles concerning about motion and appearance user settings
+- how to implement delay in fetch requests
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+Concepts I am still not completely comfortable with or techniques I found useful that I want to refine and perfect:
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+  - reusable components best practices
+  - accessibility best practices
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Redux Toolkit Quick Start](https://redux-toolkit.js.org/tutorials/quick-start) - Great official Redux Toolkit quick start tutorial
+- [prefers-reduced-motion: Sometimes less movement is more](https://web.dev/prefers-reduced-motion/) - Great article about why reducing motion is important and how to implement it
+- [How to Create Dark/Light Mode with React (Tailwind Styling)](https://dev.to/naomipham_/how-to-create-darklight-mode-with-react-and-tailwind-59e0) - Article which helped me to understand how to implement theme switch
+- [Class detection in-depth](https://tailwindcss.com/docs/content-configuration#dynamic-class-names) - Tailwind official docs explaining how to work with dynamic classes
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - [revuwem](https://www.github.com/revuwem)
+- Frontend Mentor - [@revuwem](https://www.frontendmentor.io/profile/revuwem)
