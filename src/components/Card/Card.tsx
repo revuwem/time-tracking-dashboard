@@ -76,7 +76,7 @@ const Card: React.FC<CardProps> = ({ data, index = 0 }) => {
       >
         <img src={data.icon} alt="" className="h-full -translate-y-2 " />
       </div>
-      <section className="relative p-4 md:p-7 -mt-7 bg-blue-pale dark:bg-blue-dark rounded z-10 hover:bg-blue-darken dark:hover:bg-blue-darken hover:cursor-pointer transition">
+      <section className="relative p-4 md:p-7 -mt-7 bg-blue-pale dark:bg-blue-dark rounded z-10 hover:bg-blue-darken dark:hover:bg-blue-lighten hover:cursor-pointer transition">
         <div className="flex justify-between mb-6">
           <h3 className="font-medium text-lg text-black dark:text-white">
             {data.title}
