@@ -46,7 +46,7 @@ Light theme
 ### Links
 
 - Live Site URL: [https://revuwem.github.io/time-tracking-dashboard/](https://revuwem.github.io/time-tracking-dashboard/)
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://github.com/revuwem/time-tracking-dashboard](https://github.com/revuwem/time-tracking-dashboard)
 
 ## My process
 
