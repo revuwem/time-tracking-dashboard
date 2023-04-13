@@ -28,7 +28,7 @@ function App() {
 
   return (
     <main
-      className={`min-h-screen p-5 pb-10 grid place-content-center lg:place-content-stretch lg:place-items-center ${
+      className={`min-h-screen p-5 pb-10 grid place-content-center ${
         isDarkMode ? "dark bg-black" : "bg-gray"
       } `}
     >
