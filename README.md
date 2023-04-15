@@ -28,10 +28,10 @@ Users should be able to:
 Extended requirements:
 
 - User should be able to switch between Dark and Light theme mode
-- UI theme should be initialized based on user's system preferences
-- User should be able to reset current streak on selected period
-- User should be able to reset previous streak on selected period
-- User should be able to reset all streak on selected period
+- UI theme should be initialized based on the user's system preferences
+- User should be able to reset the current streak on the selected period
+- User should be able to reset the previous streak on the selected period
+- User should be able to reset the whole streak on the selected period
 
 ### Screenshot
 
@@ -69,7 +69,7 @@ What I learned:
 - practice Typescript
 - how to implement dark/light mode switch using React and TailwindCSS
 - how to implement custom animations using TailwindCSS
-- how to implement styles concerning about motion and appearance user settings
+- how to implement styles considering motion and appearance user settings
 - how to implement delay in fetch requests
 
 ### Continued development
